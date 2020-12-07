@@ -12,4 +12,6 @@ RUN adduser -u 0 -D -h /root root
 USER root
 WORKDIR /root
 
-ENTRYPOINT /bin/sh
+RUN sed -i 's/bash/ash/g' /usr/bin/javac
+
+ENTRYPOINT /bin/ash
